@@ -1,0 +1,53 @@
+<div class="ui-widget">
+  <header class="ui-widget-h1-header">Questions List</header>
+  <div class="ui-widget-list">
+    <input type="text" pInputText placeholder="Find">
+    <img class="search" src="assets/images/Search.png" />
+    <a (click)="showDialogToAddQuestion()" href="Javascript:void(0);" class="a-l2-link button-add" icon="fa-angle-right" pTooltip="Add New Question"
+      tooltipPosition="top">
+      <img class="img" src="assets/images/Add.png" />
+      <u class="img-space">Add New Question</u>
+    </a>
+    <p-messages [value]="infomessage"></p-messages>
+
+    <!--List Details-->
+    <p-dataTable [value]="outreachFeedbackQuestionList" [paginator]="true" [responsive]="true" [rows]="10">
+      <p-column field="QuestionID" header="Question ID" [sortable]="true"></p-column>
+      <p-column field="QuestionName" header="Question Name" [sortable]="true"></p-column>
+      <p-column field="Created_By" header="Created By" [sortable]="true"></p-column>
+      <p-column field="Created_Date" header="Created Date" [sortable]="true"></p-column>
+      <p-column header="Actions" [style]="{'width':'10%'}">
+        <ng-template pTemplate="body" let-usergroup="rowData">
+          <a (click)="showDialogtoUpdate(usergroup)" class="pad-left" href="Javascript:void(0);" pTooltip="Edit" tooltipPosition="top">
+            <img src="assets/images/Edit.png" />
+          </a>&nbsp;&nbsp;
+          <a (click)="showDialogtoDelete(usergroup)" class="pad-left" href="Javascript:void(0);" pTooltip="Delete" tooltipPosition="top">
+            <img src="assets/images/Delete.png" />
+          </a>
+        </ng-template>
+      </p-column>
+    </p-dataTable>
+    <!--Add-->
+    <p-dialog [header]="headername" [(visible)]="displayAddDialog" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '700px', height: '397px'}">
+      <p-messages [value]="errormessage"></p-messages>
+      <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" *ngIf="outreachFeedbackQuestion">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label for="QuestionName">Question Name</label>
+          </div>
+          <div class="ui-grid-col-6">
+            <textarea id="QuestionName" rows="3" cols="50" pInputTextarea autoResize="autoResize" placeholder="Enter New Question" [(ngModel)]="outreachFeedbackQuestion.QuestionName"
+              maxlength="250"></textarea>
+          </div>
+        </div>
+      </div>
+      <footer class="btn-footer">
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+          <button type="button" pButton (click)="saveQuestion()" icon="pi pi-check" label="Save"></button>
+          <button type="button" pButton (click)="displayAddDialog=false;" icon="pi pi-times" label="Cancel"></button>
+        </div>
+      </footer>
+    </p-dialog>
+    <p-confirmDialog width="550"></p-confirmDialog>
+  </div>
+</div>

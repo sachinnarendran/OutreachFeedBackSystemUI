@@ -1,0 +1,72 @@
+<div class="ui-widget">
+  <header class="ui-widget-h1-header">Feedback Options List</header>
+  <div class="ui-widget-list">
+      <div style="text-align: left">
+        <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+        <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')"
+          style="width:auto">
+          <a (click)="showDialogToAdd()" href="Javascript:void(0);" class="a-l2-link button-add" pTooltip="Add" style="text-align: right"
+            tooltipPosition="top">
+            <img class="img" src="assets/images/Add.png" />
+            <u class="img-space">Add New Feedback Option</u>
+          </a>
+      </div>
+    <p-messages [value]="infomessage"></p-messages>
+
+    <!--List Details-->
+    <p-dataTable #dt [value]="outreachFeedbackOptionList" [paginator]="true" [responsive]="true" [rows]="10">
+      <p-column field="FeedbackOption_Description" header="Feedback Option" [sortable]="true"></p-column>
+      <p-column field="Feedback_Type" header="Feedback Type" [sortable]="true"></p-column>
+      <p-column field="Created_By" header="Created By" [sortable]="true"></p-column>
+      <p-column field="Created_Date" header="Created Date" [sortable]="true"></p-column>
+      <p-column header="Actions" [style]="{'width':'10%'}">
+        <ng-template pTemplate="body" let-usergroup="rowData">
+          <a (click)="showDialogtoUpdate(usergroup)" class="pad-left" href="Javascript:void(0);" pTooltip="Edit" tooltipPosition="top">
+            <img src="assets/images/Edit.png" />
+          </a>&nbsp;&nbsp;
+          <a (click)="showDialogtoDelete(usergroup)" class="pad-left" href="Javascript:void(0);" pTooltip="Delete" tooltipPosition="top">
+            <img src="assets/images/Delete.png" />
+          </a>
+        </ng-template>
+      </p-column>
+    </p-dataTable>
+    <!--Add-->
+    <p-dialog [header]="headername" [(visible)]="displayAddDialog" [responsive]="true" showEffect="fade" [modal]="true">
+      <p-messages [value]="errormessage"></p-messages>
+      <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" *ngIf="outreachFeedbackOption">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label for="FeedbackOption_Description">Feedback Option</label>
+          </div>
+          <div class="ui-grid-col-6">
+            <input pInputText id="FeedbackOption_Description" [(ngModel)]="outreachFeedbackOption.FeedbackOption_Description" placeholder="Enter Feedback Option Name"
+            />
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label for="Feedback_Type">Question</label>
+          </div>
+          <div class="ui-grid-col-6">
+            <p-dropdown [options]="questions" [(ngModel)]="selectedQuestion" placeholder="Select Question" [showClear]="true"></p-dropdown>
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label for="Feedback_Type">Feedback Option Type</label>
+          </div>
+          <div class="ui-grid-col-6">
+            <p-dropdown [options]="feedbackTypes" [(ngModel)]="selectedfbtype" placeholder="Select Feedback Type" [showClear]="true"></p-dropdown>
+          </div>
+        </div>
+      </div>
+      <footer class="btn-footer">
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+          <button type="button" pButton (click)="saveFeedbackOption()" icon="pi pi-check" label="Save"></button>
+          <button type="button" pButton (click)="displayAddDialog=false;" icon="pi pi-times" label="Cancel"></button>
+        </div>
+      </footer>
+    </p-dialog>
+    <p-confirmDialog width="550"></p-confirmDialog>
+  </div>
+</div>

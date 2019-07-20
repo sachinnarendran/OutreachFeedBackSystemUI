@@ -1,0 +1,124 @@
+// Media Queries
+///////////////////////////////////////////////////////////////////////////////
+//@custom-media --small-viewport screen and (min-width: 0);
+//@custom-media --small-viewport screen and (min-width: 768px);
+//@custom-media --medium-viewport screen and (min-width: 991px);
+//@custom-media --large-viewport screen and (min-width: 1200px);
+//@custom-media --xlarge-viewport screen and (min-width: 1400px);
+
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$georgia: Georgia, Cambria, "Times New Roman", Times;
+$helvetica: "Helvetica Neue", Helvetica, Roboto, Arial;
+
+// Chinese/Japanese/Korean Fonts
+$cjk: "微软雅黑", "Microsoft YaHei", "STHeiti", "黑体", "Hei", "SimHei";
+
+// General
+$serif: $georgia, $cjk, serif;
+$sans-serif: $sans-regular, "Arial Narrow", $helvetica, $cjk, sans-serif;
+
+// Groups
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+$header-broad-small-font-family: $sans-broad-small, $base-font-family;
+$header-broad-font-family: $sans-broad, $base-font-family;
+$mobile-broad-font: $sans-medium, $base-font-family;
+//$header-serif-font-family: $serif-regular, $serif;
+
+$big-font-size: 2rem;
+$small-font-size:1rem;
+$tiny-font-sise:0.8rem;
+$base-font-size: 1.125rem;
+$base-line-height: 1.5rem;
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+$ship-gray: #414146;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+$blue: #477DCA;
+$button-hover-blue:#5A7F96;
+$button-blue: #002F58;
+$dark-blue: #003057;
+$bright-red: #b30000;
+$steel: #f0f0f0;
+$wild-sand: #f6f6f6;
+$mercury: #e7e7e7;
+$cod-gray-rgb:#161618;
+$color-sep: #145081;
+$green-active: #198013;
+$red: #d9534f;
+
+// Primary Colors
+$white: #fff;
+$white-rgb: #fff;
+$black: #000;
+$blue: #003057;
+$graphite-gray: #4d4e53;
+$silver: #9a9b9d;
+
+// Complementary Colors (Names from client)
+$pms-7545-c: #425563;
+$pms-5415-c: #5b7f95;
+$pms-544-c: #bdd6e6;
+$pms-7527-c: #d6d2c4;
+$pms-467-c: #d3bc8d;
+$pms-7533-c: #4b3c30;
+$pms-158-c: #e87722;
+$pms-116-c: #ffcb00;
+
+// Approx. color names.
+$gallery: #ECECEC;
+$fiord: $pms-7545-c;
+$horizon: $pms-5415-c;
+$periwinkle-gray: $pms-544-c;
+$swirl: $pms-7527-c;
+$straw: $pms-467-c;
+$mondo: $pms-7533-c;
+$tango: $pms-158-c;
+$supernova: $pms-116-c;
+
+// Body Color
+$base-body-color: $white;
+
+//  Font Colors
+$base-font-color: $dark-blue;
+$base-accent-color: $blue;
+
+//  Text Link Colors
+$base-link-color: $dark-blue;
+$hover-link-color: $horizon;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Nav colors
+$color-nav-bg:  $white;
+$color-nav-bg-alt: $wild-sand;
+
+$color-nav-list-item: $white;
+$color-nav-list-item-alt: $black;
+
+$color-nav-drop-bg: $gallery;
+$color-nav-drop: $black;
+
+// Nav
+$nav-height: 105px;
+$nav-height-small: 50px;
+
+$collapse-menu: 830px;
+
+$viewport-small: 768px;
+$viewport-medium: 992px;
+$viewport-large: 1200px;
+$viewport-xlarge: 1600px;

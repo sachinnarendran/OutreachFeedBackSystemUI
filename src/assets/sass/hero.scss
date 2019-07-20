@@ -1,0 +1,73 @@
+// Hero
+//////////////////////////
+
+@import 'variables';
+
+// Hero--primary
+//////////////////////////
+.vl-Hero--primary {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (min-width: $viewport-large){
+    margin-top: 7.4rem;
+    margin-bottom: 5.4rem;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 0.2em;
+
+    @media (min-width: $viewport-large){
+      margin-bottom: 0.4em;
+    }
+  }
+}
+
+.vl-js-is-maximized {
+  .vl-Hero--primary {
+    display: none;
+  }
+}
+
+// Hero--sub
+//////////////////////////
+.vl-Hero--sub {
+   margin-top: 2rem;
+  margin-bottom: 4.4rem;
+  text-align: center;
+  h1, h2 {
+    text-transform: uppercase;
+  }
+}
+
+// Hero common
+//////////////////////////
+
+.vl-Hero-context {
+  display: block;
+  margin: 1.5em 0 0.5em 0;
+
+  font-family: $header-font-family;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+
+  @media (min-width: $viewport-large) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  @media (min-width: $viewport-xlarge) {
+    margin-bottom: 1.5em;
+  }
+}
+

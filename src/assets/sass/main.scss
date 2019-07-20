@@ -1,0 +1,62 @@
+@import 'variables';
+// Main
+// ==============================
+
+#v2-Main {
+  position: absolute;
+  left:0px;
+  top: 120px;
+  width:100%;
+  z-index:1;
+  
+}
+
+.level-one {
+  z-index:1;
+}
+
+.body-part {
+ 
+  overflow-y:auto;
+  padding-bottom:152px;
+ 
+}
+
+.main-img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mainContainer {
+text-align:left;
+
+}
+
+$subsmall: 18px;
+$submedium:22px;
+$sublarge:30px;
+
+@media (min-width: $viewport-small) {
+  .container {
+    width: $viewport-small - $subsmall;
+  }
+}
+@media (min-width: $viewport-medium) {
+  .container {
+    width: $viewport-medium -$submedium;
+  }
+}
+@media (min-width: $viewport-large) {
+  .container {
+    width: $viewport-large - $sublarge;
+  }
+}

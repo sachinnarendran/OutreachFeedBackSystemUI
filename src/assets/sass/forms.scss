@@ -1,0 +1,39 @@
+﻿@import 'variables';
+.btn
+{
+    font-family: $sans-regular,Helvetica,Arial,sans-serif;
+    font-size:14px;
+    text-transform: uppercase;
+    color:$white;
+    background-color:$button-blue;
+    min-height:24px;
+    border-width: 1px;
+    padding:8px;
+    letter-spacing:1.75px;
+}
+
+.btn:hover 
+{
+    background-color:$button-hover-blue;
+
+}
+button[disabled]:active, button[disabled],
+input[type="button"][disabled]:active,
+input[type="button"][disabled],
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled] ,
+button[disabled]:hover,
+input[type="button"][disabled]:hover,
+input[type="submit"][disabled]:hover
+{
+    /*background-color: $dark-gray;*/
+}
+
+
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+

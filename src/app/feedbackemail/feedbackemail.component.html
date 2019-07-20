@@ -1,0 +1,43 @@
+<div class="ui-widget">
+  <header class="ui-widget-h1-header">Outreach Volunteer Feedback</header>
+  <div class="ui-widget-list">
+    <div class="ui-dialog-content ui-widget-content">
+      <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad">
+        <p-messages [value]="infomessage"></p-messages>
+        <p-messages [value]="errorMessage"></p-messages>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label>{{selectedfbtype}}</label>
+          </div>
+        </div>
+        <div class="ui-grid-row" *ngFor="let feedbackOption of feedbackOptionsList">
+          <div class="ui-grid-col-4">
+            <p-radioButton name="feedbackOption.FeedbackOption_Description" value="feedbackOption.FeedbackOptionID" label="feedbackOption.FeedbackOption_Description"
+              [(ngModel)]="feedbackOption.FeedbackOptionID"></p-radioButton>
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <label>Smiley Rating</label>
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-4">
+            <div class="rating">
+              <span class="rating1">😶</span>
+              <span class="rating2">😶</span>
+              <span class="rating3">😶</span>
+              <span class="rating4">😶</span>
+              <span class="rating5">😶</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+        <button type="button" pButton icon="pi pi-check" (click)="Submit()" label="Submit"></button>
+      </div>
+    </footer>
+  </div>
+</div>

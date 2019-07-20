@@ -1,0 +1,42 @@
+@import 'variables';
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    background-color: $white;
+    height:100%;
+}
+
+body {
+    background-color: $white;
+ margin: 0;
+ font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}

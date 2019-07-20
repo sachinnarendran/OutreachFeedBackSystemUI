@@ -1,0 +1,120 @@
+@import 'variables';
+// Typography
+// =========================
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  line-height: $base-line-height;
+  letter-spacing: 0.9px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: $header-broad-small-font-family;
+  font-size: 4.8rem;
+  line-height: 0.9em;
+  margin-bottom: 0.4em;
+
+  @media (min-width: $viewport-small) {
+    font-family: $header-broad-font-family;
+    font-size: 5rem;
+  }
+
+  @media (min-width: $viewport-medium) {
+    font-size: 6rem;
+  }
+
+  @media (min-width: $viewport-large) {
+    font-size: 6rem;
+  }
+
+  @media (min-width: $viewport-xlarge) {
+    font-size: 7rem;
+  }
+}
+
+h2 {
+  font-size: $big-font-size;
+  line-height: 2.4rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: $viewport-small) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  @media (min-width: $viewport-large) {
+    font-size: 5.4rem;
+    line-height: 6.4rem;
+  }
+}
+
+
+
+h3 {
+  font-size: $small-font-size;
+  letter-spacing: 0.1rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+  margin: 1.2em 0;
+
+  @media (min-width: $viewport-large) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin: 1em 0;
+
+  @media (min-width: $viewport-large) {
+    line-height: 2.2rem;
+  }
+}
+
+h5 {
+  font-size: $big-font-size;
+  line-height: 2.5rem;
+}
+
+small {
+  font-size:$small-font-size;
+  line-height: 1.8rem;
+}
+
+.tiny {
+      font-size:$tiny-font-sise;
+      line-height: 0.2rem;
+}
+
+.tinyError {
+      font-size:$tiny-font-sise;
+      line-height: 0.2rem;
+      color:$red;
+}
+
+.tinyWarning {
+      font-size:$tiny-font-sise;
+      line-height: 0.2rem;
+      color:$light-red;
+}

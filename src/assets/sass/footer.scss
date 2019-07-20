@@ -1,0 +1,49 @@
+@import 'variables';
+// Footer
+// ==============================
+
+.vl-Footer {
+  background-color: $dark-blue;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-top:30px;
+  color: $white;
+  text-align: center;
+  font-size: 1.6rem;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
+
+.vl-Footer-row {
+  padding-bottom: 30px;
+}
+.v2-Footer-row {
+  padding-bottom: 30px;
+}
+
+.vl-Footer-small {
+  font-size: 50%;
+  color: $periwinkle-gray;
+}
+
+.vl-Footer-logo {
+  max-height: 15px;
+}
+
+.vl-Footer-link {
+  font-family: $header-font-family;
+  font-size: $small-font-size;
+  color: $white;
+  letter-spacing: normal;
+  transition: color 0.1s linear;
+  font-size: $small-font-size;
+  padding:3px;
+}
+
+.vl-Footer-link:active,
+.vl-Footer-link:focus,
+.vl-Footer-link:hover {
+  color: #ccc;
+  text-decoration: none;
+}

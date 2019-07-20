@@ -1,0 +1,44 @@
+@import 'variables';
+// Icons
+// =========================
+
+$globe-value: '\E02D';
+$arrow-right-fat: '\E003';
+$arrow-right-thin: '\E007';
+$checkbox-false: '\E011';
+$checkbox-true: '\E012';
+$menu: '\2630';
+
+.vl-Icon {
+  font-family: 'Normal';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.vl-Icon--globe-blue:before {
+  content: $globe-value;
+  position: relative;
+  bottom: -2px;
+  color: $periwinkle-gray;
+}
+
+.vl-Icon--menu:before {
+  content: $menu;
+  position: relative;
+  bottom: -8px;
+  font-size: 24px;
+  color: $white;
+  padding-left:14px;
+}
+
+
+
+.vl-Icon--arrow-right-thin:before {
+  content: $arrow-right-thin;
+  position: relative;
+  top: 3px;
+}
+

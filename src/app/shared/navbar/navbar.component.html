@@ -1,0 +1,28 @@
+<nav class="vl-Navbar">
+  <div class="vl-Navbar-header">
+    <img src="assets/images/outreach_logo.png" class="vl-Navbar-sandimg" alt="Reda">
+  </div>
+  <div class="vl-Navbar-CoCText">
+    Outreach Feedback Management System
+  </div>
+  <div id="idNav">
+    <a class="a-l2-link" href="https://news.cognizant.com/" target="_blank" title="Outreach Cognizant"></a>
+  </div>
+  <div class="nav-list-prim nav-small">
+    <a id="btnMenuMobile">
+      <i class="vl-Icon vl-Icon--menu"></i>
+    </a>
+  </div>
+  <div class="nav-list-prim nav-big">
+    <p-menubar [model]="ofmMenuItems"></p-menubar>
+    <div id="Horizontalline"></div>
+  </div>
+  <br />
+  <br />
+  <div class="a-l2-link user-style">
+    <img src="assets/images/Setting.png" />
+    <u>{{headerName}}</u>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
